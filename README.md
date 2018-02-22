@@ -2,4 +2,4 @@
 Speech to text for a court audio Transcription
 
 
-# Reach out to annorjo@vcu.edu for Data
+Reach out to annorjo@vcu.edu for Data
