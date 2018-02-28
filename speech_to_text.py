@@ -24,19 +24,18 @@ for i, chunk in enumerate(chunks):
 
     chunk_name = "chunk{0}.wav".format(i)
 
-    if i == 18:
-        chunk.export(chunk_name, format="wav")
+    chunk.export(chunk_name, format="wav")
 
-        with io.open(chunk_name, 'rb') as audio_file:
-            content = audio_file.read()
+    with io.open(chunk_name, 'rb') as audio_file:
+        content = audio_file.read()
 
-        audio = types.RecognitionAudio(content=content)
-        config = types.RecognitionConfig(
-            encoding=enums.RecognitionConfig.AudioEncoding.LINEAR16,
-            sample_rate_hertz=44100,
-            language_code='en-US')
+    audio = types.RecognitionAudio(content=content)
+    config = types.RecognitionConfig(
+        encoding=enums.RecognitionConfig.AudioEncoding.LINEAR16,
+        sample_rate_hertz=44100,
+        language_code='en-US')
 
-        operation = client.long_running_recognize(config, audio)
+    operation = client.long_running_recognize(config, audio)
 
         print('Transcription {}'.format(i))
         response = operation.result(timeout=100)
