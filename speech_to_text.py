@@ -5,7 +5,7 @@ from google.cloud import speech
 from google.cloud.speech import enums
 from google.cloud.speech import types
 
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/Users/Jeffjnr/Desktop/stevie/stevie-9a32376eb87a.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "path_to_json"
 
 client = speech.SpeechClient()
 
