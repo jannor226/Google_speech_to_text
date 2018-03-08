@@ -9,7 +9,7 @@ os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "path_to_json"
 
 client = speech.SpeechClient()
 
-path = "/Users/Jeffjnr/Downloads/trial.wav"
+path = "path_to_wav"
 
 path2 = AudioSegment.from_wav(path)
 path2 = path2.set_channels(1)
